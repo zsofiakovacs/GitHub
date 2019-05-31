@@ -1,31 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ReportFormComponent } from './report-form/report-form.component';
+import { UserFormComponent } from './user-form/user-form.component';
 
-const routes: Routes = [{
-  path: "home",
-  loadChildren: "./home/home.module#HomeModule" //loadchildren is used to declare a lazy loading for the modules
-  
-  },
-    {
-      path: "report",
-      loadChildren: "./report/report.module#ReportModule" //loadchildren is used to declare a lazy loading for the modules
-      
-      },
-      {
-        path:"",
-        redirectTo:"home",
-        pathMatch:"full"
-      }
-     
-  ];
+const routes: Routes = [
+
+
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { 
-
-
-
-  
-}
+export class AppRoutingModule { }
