@@ -1,30 +1,34 @@
-<p>
-  report-form works!
-</p>
-<div class="container">
-  <h1>Time Form</h1>
-  <p>{{model.name}}</p>
-   <!-- <form #userForm="ngForm">
-    <div class="form-group">
-      <label for="startTime">Start Time</label>
-      <input type="number" class="form-control" id="startTime" required
-      [(ngModel)]="model.startTime" name="startTime"
-      >
-      
-      TODO: remove this: {{model.startTime}}
-    </div>
 
-  <div class="form-group">
-      <label for="endTime">End Time</label>
-      <input type="number" class="form-control" id="endTime"
-      [(ngModel)]="model.endTime" name="endTime"
-      >
-      TODO: remove this: {{model.endTime}}
-    </div>
+<div class="wrapper">
+<div id="formContent">
+  <div class="fadeIn first">
+    <img src="/assets/lablogo.jpg" style="max-width: 200px" id="icon" alt="User Icon" />
+  </div>
   
-  </form>
-</div>
-  -->
+  <div class="welcome">Welcome {{model.name}}!</div>
 
-    <button type="submit" class="btn btn-success" (click)="onSubmit()">Check In</button>
-    <button type="submit" class="btn btn-success" (click)="onSubmit()">Check On</button>
+  <div class="clock">{{today}}</div>
+
+
+
+    <div>
+      <textarea type="text" class="fadeIn fourth" value="Comments" placeholder="Please add your comments here"></textarea>
+      </div>
+      <div class="register"> 
+       <button type="submit" class="checkin" (click)="onSubmitIn()">Check In</button>
+    
+      <button type="submit" class="checkout" (click)="onSubmitOut()">Check Out</button>
+  
+  
+
+  
+
+
+    </div>
+</div>
+    
+   
+
+
+
+    

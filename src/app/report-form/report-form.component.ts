@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user';
+import { ReportService } from '../report.service';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-report-form',
@@ -7,7 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportFormComponent implements OnInit {
 
-  constructor() { }
+  today;
+  model: User;
+
+  constructor(private reportService: ReportService, private datePipe:DatePipe ) { 
+    this.model=reportService.model;
+    this.today = this.datePipe.transform( new Date(),'EEEE dd/MM/yyyy HH:mm');
+  }
 
   ngOnInit() {
   }

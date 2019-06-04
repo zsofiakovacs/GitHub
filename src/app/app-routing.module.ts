@@ -4,8 +4,14 @@ import { ReportFormComponent } from './report-form/report-form.component';
 import { UserFormComponent } from './user-form/user-form.component';
 
 const routes: Routes = [
-
-
+  {
+    path: '',
+    component: UserFormComponent,
+  },
+ {
+    path: 'report',
+    component: ReportFormComponent,
+  }
 
 ];
 

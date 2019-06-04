@@ -5,6 +5,12 @@ import { User } from './user';
   providedIn: 'root'
 })
 export class ReportService {
-  model = new User( 'User@domain', "");
-  constructor() { }
+  public model: User;
+
+  constructor() {
+    this. model = new User( '', "");
+   }
+
+
+
 }
