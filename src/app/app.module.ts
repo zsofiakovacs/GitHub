@@ -9,13 +9,15 @@ import { DatePipe } from '@angular/common';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslationComponent } from './translation/translation.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UserFormComponent,
-    ReportFormComponent
+    ReportFormComponent,
+    TranslationComponent
   ],
   imports: [
     BrowserModule,
