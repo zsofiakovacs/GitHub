@@ -6,7 +6,9 @@
     "pass.empty": "Password is required",
     "mail.short": "Email must be at least 4 characters long",
     "pass.short": "Password must be at least 4 characters long",
-    "welcome": "Welcome"
+    "welcome": "Welcome",
+    "checkin": "Check In",
+    "checkout": "Check Out"
 
 
 

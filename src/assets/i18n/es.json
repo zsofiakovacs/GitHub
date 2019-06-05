@@ -6,6 +6,8 @@
     "pass.empty": "Introduce contraseña",
     "mail.short": "El usuario debe tener al menos 4 caracteres",
     "pass.short": "La contraseña debe tener al menos 4 caracteres",
-    "welcome": "Bienvenido"
+    "welcome": "Bienvenid@",
+    "checkin": "Entrada",
+    "checkout": "Salida"
 
   }
