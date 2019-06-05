@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {User} from '../user'
 import { ReportService } from '../report.service';
 import { AuthenticationService } from '../services/authentication.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-user-form',
@@ -24,7 +25,7 @@ export class UserFormComponent implements OnInit {
   // TODO: Remove this when we're done
   get diagnostic() { return JSON.stringify(this.model); }
 
-  constructor(private reportService: ReportService, private authenticationService: AuthenticationService) { 
+  constructor(private reportService: ReportService, private authenticationService: AuthenticationService, private translateService: TranslateService) { 
     this.model=reportService.model
    
     

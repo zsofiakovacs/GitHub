@@ -1,0 +1,15 @@
+{
+    "principal.title" : "Time Control App",
+    "password": "password",
+    "comments": "Please add your comments here",
+    "mail.empty": "Email is required",
+    "pass.empty": "Password is required",
+    "mail.short": "Email must be at least 4 characters long",
+    "pass.short": "Password must be at least 4 characters long",
+    "welcome": "Welcome"
+
+
+
+  }
+  
+

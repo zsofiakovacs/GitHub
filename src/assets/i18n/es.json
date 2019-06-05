@@ -1,0 +1,11 @@
+{
+    "principal.title" : "App Control Horario",
+    "password": "contraseña",
+    "comments": "Por favor añade comentarios aquí",
+    "mail.empty": "Introduce email",
+    "pass.empty": "Introduce contraseña",
+    "mail.short": "El usuario debe tener al menos 4 caracteres",
+    "pass.short": "La contraseña debe tener al menos 4 caracteres",
+    "welcome": "Bienvenido"
+
+  }

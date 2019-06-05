@@ -1,8 +1,9 @@
-<div style="text-align:center">
-    
+
+<app-translation></app-translation>
+<div style="text-align: center">
   <h1>
-      
-    <a [routerLink]= "['/login']" style="color: hsla(191.17021276595744, 93.07%, 39.61%, 1.00)">{{ title }}</a>
+    <a [routerLink]= "['/login']" style="color: hsla(191.17021276595744, 93.07%, 39.61%, 1.00)">{{ 'principal.title' | translate }}</a>
+    
   </h1>
 </div>
 <router-outlet></router-outlet>

@@ -5,14 +5,14 @@
     <img src="/assets/lablogo.jpg" style="max-width: 200px" id="icon" alt="User Icon" />
   </div>
   
-  <div class="welcome">Welcome {{model.name}}!</div>
+  <div class="welcome">{{ 'welcome' | translate }} {{model.name}}!</div>
 
   <div class="clock">{{today}}</div>
 
 
 
     <div>
-      <textarea type="text" class="fadeIn fourth" value="Comments" placeholder="Please add your comments here"></textarea>
+      <textarea type="text" class="fadeIn fourth" value="Comments" placeholder="{{ 'comments' | translate }}"></textarea>
       </div>
       <div class="register"> 
        <button type="submit" class="checkin" (click)="onSubmitIn()">Check In</button>
