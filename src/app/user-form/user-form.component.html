@@ -9,11 +9,13 @@
         </div>
   <form #userForm="ngForm">
     <!-- <div class="form-group"> -->
-      <input type="email" class="fadeIn second" placeholder="email" id="name" ng-pattern=".+@osapiens.com" size ="40"  
-      [(ngModel)]="model.name" name="email" #email="ngModel" pattern= "@" required/>
+      <input type="email" class="fadeIn second" placeholder="email" id="name" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" size ="40"  
+      [(ngModel)]="model.name" name="email" #email="ngModel" required/>
 
     <div *ngIf="email.invalid && (email.dirty || email.touched)"
       class="alert alert-danger">
+      
+
       <div *ngIf="email.errors?.pattern">
         {{ 'pattern' | translate }}
       </div>
