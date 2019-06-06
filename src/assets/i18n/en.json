@@ -8,7 +8,8 @@
     "pass.short": "Password must be at least 4 characters long",
     "welcome": "Welcome",
     "checkin": "Check In",
-    "checkout": "Check Out"
+    "checkout": "Check Out",
+    "pattern": "You should include a valid email"
 
 
 

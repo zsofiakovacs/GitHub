@@ -8,6 +8,7 @@
     "pass.short": "La contraseña debe tener al menos 4 caracteres",
     "welcome": "Bienvenid@",
     "checkin": "Entrada",
-    "checkout": "Salida"
+    "checkout": "Salida",
+    "pattern": "Deberías incluir un email válido"
 
   }
