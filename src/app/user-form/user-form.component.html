@@ -33,7 +33,7 @@
 
     <!-- <div class="form-group"> -->
   
-      <input type="password" class="fadeIn third" placeholder="{{ 'password' | translate }}" id="password" required minlength="4"
+      <input type="password" class="fadeIn third" placeholder="{{ 'password' | translate }}" id="password" required minlength="1"
       [(ngModel)]="model.password" name="password"  #password="ngModel" required />
 
       <div *ngIf="password.invalid && (password.dirty || password.touched)"
