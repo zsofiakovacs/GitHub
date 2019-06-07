@@ -9,7 +9,7 @@
         </div>
   <form #userForm="ngForm">
     <!-- <div class="form-group"> -->
-      <input type="email" class="fadeIn second" placeholder="email" id="name" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" size ="40"  
+      <input type="email" class="fadeIn second" placeholder="email" id="name" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$" size ="40"  
       [(ngModel)]="model.name" name="email" #email="ngModel" required/>
 
     <div *ngIf="email.invalid && (email.dirty || email.touched)"
@@ -33,7 +33,7 @@
 
     <!-- <div class="form-group"> -->
   
-      <input type="text" class="fadeIn third" placeholder="{{ 'password' | translate }}" id="password" required minlength="4"
+      <input type="password" class="fadeIn third" placeholder="{{ 'password' | translate }}" id="password" required minlength="4"
       [(ngModel)]="model.password" name="password"  #password="ngModel" required />
 
       <div *ngIf="password.invalid && (password.dirty || password.touched)"
@@ -51,7 +51,7 @@
       
      <!--  </div> -->
      <div>
-        <button type="button" type="submit" [routerLink]="['/report']" class="fadeIn fourth" (click)="onSubmit()" [disabled]="!userForm.valid" >Login</button>
+        <button type="button" type="submit" class="fadeIn fourth" (click)="onSubmit()" [disabled]="!userForm.valid" >Login</button>
      </div>
 
 
