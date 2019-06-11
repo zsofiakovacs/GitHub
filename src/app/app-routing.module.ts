@@ -8,6 +8,10 @@ const routes: Routes = [
     path: '',
     component: UserFormComponent,
   },
+  {
+    path: 'user',
+    component: UserFormComponent,
+  },
  {
     path: 'report',
     component: ReportFormComponent,

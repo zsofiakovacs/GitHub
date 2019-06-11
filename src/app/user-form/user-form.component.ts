@@ -14,15 +14,19 @@ export class UserFormComponent implements OnInit {
   submitted = false;
   model: User;
 
-  constructor(private reportService: ReportService, private authenticationService: AuthenticationService, private translateService: TranslateService) { 
-    this.model=reportService.model    
+  constructor(private reportService: ReportService, private authenticationService: AuthenticationService, private translateService: TranslateService) {   
+    this.model = new User();
   }
 
   onSubmit() {
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.model))
     console.log(this.model)
-    this.authenticationService.login(this.model).subscribe( data => {
+    this.authenticationService.loginS1(this.model).subscribe( data => {
       console.log('datos:::', data);
+      console.log('logged:::', data.body.ENTRIES.LOGGED);
+      if (data.body.ENTRIES.LOGGED=="true"){
+console.log("Im in")
+      }
+
     }, err => {
       console.log('Error:::', err);
     });
