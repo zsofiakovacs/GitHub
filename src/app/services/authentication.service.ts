@@ -47,7 +47,8 @@ export class AuthenticationService {
     let body: Object = {
       "method": "POST",
       "request": {
-        "url": "https://demo.movilizer.com/MovilizerDistributionService/m2m?dataformat=JSONCorrect&deviceAddress=@backend@dphuesca.es&password=qhxvnn70bsj22"
+        //"url": "https://demo.movilizer.com/MovilizerDistributionService/m2m?dataformat=JSONCorrect&deviceAddress=@backend@dphuesca.es&password=qhxvnn70bsj22"
+        "url": "https://demo.movilizer.com/MovilizerDistributionService/m2m?dataformat=JSONCorrect&deviceAddress=@backend-web@dphuesca.es&password=ajsw3xhu8s183"
       },
       "body": {
         "DATA": {
@@ -85,8 +86,8 @@ export class AuthenticationService {
     const duel: string = responseS1.body.ENTRIES.DUEL;
     const pass: string = credentials.password;
 
-    //const md5 = new Md5();
-    //console.log(md5.appendStr('hello').end());
+    const md5 = new Md5();
+    console.log(md5.appendStr('hello').end());
 
     let passCif:string  = Md5.hashStr(pass.concat(salt)).toString().toUpperCase();
     let respDuel:string  = Md5.hashStr(passCif.concat(duel)).toString().toUpperCase();
@@ -124,5 +125,59 @@ export class AuthenticationService {
     
     return this.httpClient.post(url, body, {headers: headers})
   }
+
+  checkIn(credentials: User) : Observable<any>{
+    //checkIn() : Observable<any>{
+    let url = 'http://localhost:3000';
+
+    let body: Object = {
+      "method": "POST",
+      "request": {
+        "url": "https://demo.movilizer.com/MovilizerDistributionService/m2m?dataformat=JSONCorrect&deviceAddress=@backend-web@dphuesca.es&password=ajsw3xhu8s183"
+      },
+      "body": {
+        "DATA": {
+          "REASON_ID": "0",
+          "DATETIME_SIGNING": "2019-05-28T09:57:00.000+02:00",
+          "SIGNING_TYPE": "STANDARD",
+          "REASON_OPERATION": "INPUT",
+          "EMPLACEMENT": "OUTSIDE_OFFICE",
+          "COMPANY_ID": "MOVICODERS.COM",
+          "WORKER_ID": "ISA@MOVICODERS.COM"
+        },
+        "KEY": "R_ADD_SIGNING_1559030288228",
+        "MOVELETKEYEXT": "/query",
+        "INFO": {
+          "DEV_TIME_ZONE": "+02:00"
+      },
+        "LOGIN": {
+          "AUTHENTICATED": true,
+          "EMAIL": "ZSOFIA.KOVACS@MOVICODERS.COM",
+          "ROLE": "WORKER",
+          "LANGUAGE": "es_ES",
+          "COMPANY": {
+            "NAME": "Movicoders",
+            "COMPANY_ID": "MOVICODERS.COM"
+          },
+          "RESP_DUEL": "2BD1D8980CE40D657C48D6BA9330903D"
+        },
+        "MOVELETKEY": "TCM",
+        "TRANSACTION_ID": "ADD_SIGNING"
+      }
+    };
+         
+  
+  const headers:HttpHeaders  = new HttpHeaders();
+  headers.set('content-type', 'application/json');
+
+  return this.httpClient.post(url, body, {headers: headers})
+  .pipe(
+    flatMap(data => this.loginS2(data, credentials))
+  );
+
+
+  }
+
+
 }
 

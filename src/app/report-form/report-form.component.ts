@@ -24,7 +24,14 @@ export class ReportFormComponent implements OnInit {
   }
  
   onSubmitIn(){
-
+    
+    console.log(this.model)
+    this.authenticationService.checkIn(this.model).subscribe(data => {
+      console.log('datos:::', data);
+      console.log('logged:::', data.body.ENTRIES.LOGGED);})
+    /*this.authenticationService.checkIn(this.model.startTime, this.model).subscribe(data => {
+      console.log('datos:::', data);
+      console.log('logged:::', data.body.ENTRIES.LOGGED);})*/
   }
   onSubmitOut(){
     

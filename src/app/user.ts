@@ -4,8 +4,8 @@ export class User {
   constructor(
       public name?: string,
       public password?: string,
-      public startTime?:number,
-      public endTime?: number
+      public startTime?:any,
+      public endTime?: any
       
     ) {  
       if (!name) this.name = '';
