@@ -16,7 +16,7 @@ export class UserFormComponent implements OnInit {
   model: User;
 
   constructor(private reportService: ReportService, private authenticationService: AuthenticationService, private translateService: TranslateService,private _router: Router) {
-    this.model = new User();
+    this.model = this.reportService.model
   }
 
   onSubmit() {
@@ -25,7 +25,8 @@ export class UserFormComponent implements OnInit {
       console.log('datos:::', data);
       console.log('logged:::', data.body.ENTRIES.LOGGED);
       if (data.body.ENTRIES.LOGGED == "true") {
-        console.log("Im in")
+        
+        //console.log("Im in")
         this._router.navigate(['report']);
       } else {
         alert("An error occured: "+ data.body.ENTRIES.EXCEPTION.MESSAGE)
