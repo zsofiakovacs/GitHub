@@ -16,15 +16,16 @@ export class UserFormComponent implements OnInit {
   model: User;
 
   constructor(private reportService: ReportService, private authenticationService: AuthenticationService, private translateService: TranslateService,private _router: Router) {
-    this.model = new User();
+    this.model = this.reportService.model;
   }
 
   onSubmit() {
-    console.log(this.model)
+    console.log(this.reportService.model)
     this.authenticationService.loginS1(this.model).subscribe(data => {
       console.log('datos:::', data);
       console.log('logged:::', data.body.ENTRIES.LOGGED);
       if (data.body.ENTRIES.LOGGED == "true") {
+        alert("Hello "+this.model.name)
         console.log("Im in")
         this._router.navigate(['report']);
       } else {
