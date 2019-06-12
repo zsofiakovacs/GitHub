@@ -11,6 +11,11 @@ const routes: Routes = [
  {
     path: 'report',
     component: ReportFormComponent,
+  },
+  {
+    path: 'login',
+    redirectTo: '',
+    pathMatch: 'full'
   }
 
 ];
