@@ -3,6 +3,7 @@ import { User } from '../user'
 import { ReportService } from '../report.service';
 import { AuthenticationService } from '../services/authentication.service';
 import { TranslateService } from '@ngx-translate/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-form',
@@ -14,7 +15,7 @@ export class UserFormComponent implements OnInit {
   submitted = false;
   model: User;
 
-  constructor(private reportService: ReportService, private authenticationService: AuthenticationService, private translateService: TranslateService) {
+  constructor(private reportService: ReportService, private authenticationService: AuthenticationService, private translateService: TranslateService,private _router: Router) {
     this.model = new User();
   }
 
@@ -25,7 +26,7 @@ export class UserFormComponent implements OnInit {
       console.log('logged:::', data.body.ENTRIES.LOGGED);
       if (data.body.ENTRIES.LOGGED == "true") {
         console.log("Im in")
-        
+        this._router.navigate(['report']);
       } else {
         alert("An error occured: "+ data.body.ENTRIES.EXCEPTION.MESSAGE)
       }
