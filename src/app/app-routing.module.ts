@@ -8,6 +8,11 @@ const routes: Routes = [
     path: '',
     component: UserFormComponent,
   },
+  {
+    path: 'login',
+    redirectTo: '',
+    pathMatch: 'full'
+  },
  {
     path: 'report',
     component: ReportFormComponent,

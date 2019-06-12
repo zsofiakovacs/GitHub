@@ -15,29 +15,33 @@ export class ReportFormComponent implements OnInit {
   today;
   model: User;
 
-  constructor(private reportService: ReportService, private datePipe:DatePipe, private authenticationService: AuthenticationService, private translateService: TranslateService ) { 
-    this.model=reportService.model;
-    this.today = this.datePipe.transform( new Date(),'dd/MM/yyyy HH:mm');
+  constructor(private reportService: ReportService, private datePipe: DatePipe, private authenticationService: AuthenticationService, private translateService: TranslateService) {
+    this.model = reportService.model;
+    this.today = this.datePipe.transform(new Date(), 'dd/MM/yyyy HH:mm');
   }
 
   ngOnInit() {
   }
- 
-  onSubmitIn(){
-    
+
+  onSubmitIn() {
+
     console.log(this.model)
     this.authenticationService.checkIn(this.model).subscribe(data => {
       console.log('datos:::', data);
-      console.log('logged:::', data.body.ENTRIES.LOGGED);})
-    /*this.authenticationService.checkIn(this.model.startTime, this.model).subscribe(data => {
-      console.log('datos:::', data);
-      console.log('logged:::', data.body.ENTRIES.LOGGED);})*/
+      console.log('logged:::', data.body.ENTRIES.LOGGED);
+    })
+
   }
-  onSubmitOut(){
+  onSubmitOut() {
+
+    console.log(this.model)
+    this.authenticationService.checkOut(this.model, ).subscribe(data => {
+      console.log('datos:::', data);
+      console.log('logged:::', data.body.ENTRIES.LOGGED);})
     
   }
-
 }
+
 
 
 
