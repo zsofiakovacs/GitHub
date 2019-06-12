@@ -16,11 +16,7 @@ export class UserFormComponent implements OnInit {
   model: User;
 
   constructor(private reportService: ReportService, private authenticationService: AuthenticationService, private translateService: TranslateService,private _router: Router) {
-<<<<<<< HEAD
     this.model = this.reportService.model;
-=======
-    this.model = this.reportService.model
->>>>>>> 8ca069a5a65462ded4d67c9645b0cf20124c1efc
   }
 
   onSubmit() {
@@ -29,13 +25,8 @@ export class UserFormComponent implements OnInit {
       console.log('datos:::', data);
       console.log('logged:::', data.body.ENTRIES.LOGGED);
       if (data.body.ENTRIES.LOGGED == "true") {
-<<<<<<< HEAD
-        alert("Hello "+this.model.name)
-        console.log("Im in")
-=======
         
         //console.log("Im in")
->>>>>>> 8ca069a5a65462ded4d67c9645b0cf20124c1efc
         this._router.navigate(['report']);
       } else {
         alert("An error occured: "+ data.body.ENTRIES.EXCEPTION.MESSAGE)
