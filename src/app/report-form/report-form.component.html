@@ -7,8 +7,11 @@
   
   <div class="fadeIn second">{{ 'welcome' | translate }} {{model.name}}!</div>
 
+  <div class="clock">{{today}}</div>
 
-
+  <!--<div>
+    ><textarea type="text" class="fadeIn fourth" value="Comments" placeholder="{{'comments' | translate}}"></textarea>
+  </div>-->
     
       <div class="register"> 
        <button type="submit" class="checkin" (click)="onSubmitIn()" [routerLink]= "['/login']">{{ 'checkin' | translate }}</button>
