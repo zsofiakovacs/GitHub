@@ -27,9 +27,9 @@ export class UserFormComponent implements OnInit {
       if (data.body.ENTRIES.LOGGED == "true") {
         
         //console.log("Im in")
-        this._router.navigate(['report']);
+        this._router.navigate(['report']); // if login is successfull, pass to the next page
       } else {
-        alert("An error occurred: "+ data.body.ENTRIES.EXCEPTION.MESSAGE)
+        alert("An error occurred: "+ data.body.ENTRIES.EXCEPTION.MESSAGE) //for the error message if the credentials are incorrect
       }
 
     }, err => {
