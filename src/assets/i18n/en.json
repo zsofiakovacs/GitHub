@@ -10,7 +10,10 @@
     "welcome": "Welcome",
     "checkin": "Check In",
     "checkout": "Check Out",
-    "pattern": "You should include a valid email"
+    "pattern": "You should include a valid email",
+    "credentials": "If you don't have credentials please write to supportperson@movicoders.com",
+    "checkin.reminder": "Press check in if you entered work",
+    "checkout.reminder": "Press check out if you are leaving work"
 
 
 

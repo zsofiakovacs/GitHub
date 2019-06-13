@@ -55,12 +55,10 @@
         <button type="button" type="submit" class="fadeIn fourth" (click)="onSubmit()" [disabled]="!userForm.valid" >Login</button>
      </div>
 
-     
-    
-
   </form>
-  <div>
-    <p > Enter your company email and a password and press login button. To get one please write to supportperson@movicoders.com  </p>
+
+  <div class="fadeIn second">
+    {{ 'credentials' | translate }}
   </div>
 </div>
 
