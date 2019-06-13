@@ -11,9 +11,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 export class TranslationComponent implements OnInit {
   public activeLang = 'en';
-  constructor(
-    private translate: TranslateService
-  ) {
+  constructor( private translate: TranslateService) {
     this.translate.setDefaultLang(this.activeLang);
   }
   ngOnInit() {
