@@ -5,7 +5,7 @@ import { User } from '../user';
 import {Md5} from 'ts-md5/dist/md5';
 import { flatMap } from 'rxjs/operators';
 import { DatePipe, formatDate } from '@angular/common';
-import { ReportService } from '../report.service';
+import { ReportService } from './report.service';
 
 @Injectable({
   providedIn: 'root'
@@ -16,9 +16,9 @@ export class AuthenticationService {
   constructor(private httpClient: HttpClient ) {
   }
 
-  /*login(credentials: User) : Observable<any>{
-    let url = 'https://demo.movilizer.com/MovilizerDistributionService/m2m?dataformat=JSONCorrect&deviceAddress=@backend@dphuesca.es';
-    url = url.concat(`&password=qhxvnn70bsj22`);
+  login(credentials: User) : Observable<any>{
+    let url = 'https://demo.movilizer.com/MovilizerDistributionService/m2m?dataformat=JSONCorrect&deviceAddress=@backend-web@dphuesca.es';
+    url = url.concat(`&password=ajsw3xhu8s183`);
     let body = {
       "DATA": {
         "EMAIL": "ISA@MOVICODERS.COM"
@@ -41,7 +41,7 @@ export class AuthenticationService {
     headers.set('content-type', 'application/json');
     
     return this.httpClient.post(url, body, {headers: headers});
-  }*/
+  }
 
    loginS1(credentials: User) : Observable<any>{
     let url = 'http://localhost:3000';
@@ -100,7 +100,7 @@ export class AuthenticationService {
     let body: Object = {
       "method": "POST",
       "request": {
-        "url": "https://demo.movilizer.com/MovilizerDistributionService/m2m?dataformat=JSONCorrect&deviceAddress=@backend@dphuesca.es&password=qhxvnn70bsj22"
+        "url": "https://demo.movilizer.com/MovilizerDistributionService/m2m?dataformat=JSONCorrect&deviceAddress=@backend-web@dphuesca.es&password=ajsw3xhu8s183"
       },
       "body": {
         "KEY": "R_LOGIN_1558956543532",

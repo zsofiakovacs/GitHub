@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
-import { ReportService } from '../report.service';
+import { ReportService } from '../services/report.service';
 import { DatePipe } from '@angular/common';
 import { AuthenticationService } from '../services/authentication.service';
 import { TranslateService } from '@ngx-translate/core';
