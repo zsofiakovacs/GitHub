@@ -13,7 +13,7 @@ import { TranslationComponent } from '../translation/translation.component';
 })
 export class ReportFormComponent implements OnInit {
 
-  today;
+  today; //for the date
   model: User;
 
   constructor(private reportService: ReportService, private datePipe: DatePipe, private authenticationService: AuthenticationService, private translateService: TranslateService) {
@@ -24,25 +24,25 @@ export class ReportFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmitIn() {
+  onSubmitIn() { //for Check In button
 
     console.log(this.model)
     this.authenticationService.checkIn(this.model).subscribe(data => {
       console.log('datos:::', data);
       console.log('logged:::', data.body.ENTRIES.LOGGED);
     })
-    alert("You entered sing in time successfuly" )
+    alert("You entered sing in time successfully" )
 
  
 
   }
-  onSubmitOut() {
+  onSubmitOut() { //for Check On button
 
     console.log(this.model)
     this.authenticationService.checkOut(this.model, ).subscribe(data => {
       console.log('datos:::', data);
       console.log('logged:::', data.body.ENTRIES.LOGGED);})
-      alert("You entered sing out time successfuly" )
+      alert("You entered sing out time successfully" )
     
   }
 }

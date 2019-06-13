@@ -35,7 +35,7 @@ export class AuthenticationService {
       },
       "MOVELETKEY": "TCM",
       "TRANSACTION_ID": "LOGIN"
-    };
+    }; // json format how the data should be sent
 
     const headers:HttpHeaders  = new HttpHeaders();
     headers.set('content-type', 'application/json');
@@ -49,7 +49,6 @@ export class AuthenticationService {
     let body: Object = {
       "method": "POST",
       "request": {
-        //"url": "https://demo.movilizer.com/MovilizerDistributionService/m2m?dataformat=JSONCorrect&deviceAddress=@backend@dphuesca.es&password=qhxvnn70bsj22"
         "url": "https://demo.movilizer.com/MovilizerDistributionService/m2m?dataformat=JSONCorrect&deviceAddress=@backend-web@dphuesca.es&password=ajsw3xhu8s183"
       },
       "body": {
@@ -131,7 +130,7 @@ export class AuthenticationService {
   }
 
   checkIn(credentials: User) : Observable<any>{
-    //checkIn() : Observable<any>{
+    
     let url = 'http://localhost:3000';
 
     let body: Object = {
