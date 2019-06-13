@@ -31,7 +31,7 @@ export class ReportFormComponent implements OnInit {
       console.log('datos:::', data);
       console.log('logged:::', data.body.ENTRIES.LOGGED);
     })
-    alert("Your sing in time is: " +this.today)
+    alert("You entered sing in time successfuly" )
 
  
 
@@ -42,7 +42,7 @@ export class ReportFormComponent implements OnInit {
     this.authenticationService.checkOut(this.model, ).subscribe(data => {
       console.log('datos:::', data);
       console.log('logged:::', data.body.ENTRIES.LOGGED);})
-      alert("Your sing out time is: " +this.today)
+      alert("You entered sing out time successfuly" )
     
   }
 }
