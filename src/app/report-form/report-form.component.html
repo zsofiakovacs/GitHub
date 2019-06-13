@@ -7,16 +7,14 @@
   
   <div class="fadeIn second">{{ 'welcome' | translate }} {{model.name}}!</div>
 
-  <div class="clock">{{today}}</div>
-
 
 
     
       <div class="register"> 
-       <button type="submit" class="checkin" (click)="onSubmitIn()">{{ 'checkin' | translate }}</button>
+       <button type="submit" class="checkin" (click)="onSubmitIn()" [routerLink]= "['/login']">{{ 'checkin' | translate }}</button>
        <p>Press check in if you entered work</p>
     
-      <button type="submit" class="checkout" (click)="onSubmitOut()">{{ 'checkout' | translate }}</button>
+      <button type="submit" class="checkout" (click)="onSubmitOut()" [routerLink]= "['/login']">{{ 'checkout' | translate }}</button>
       <p>Press check out if you leaving work</p>
   
 
@@ -24,7 +22,7 @@
 
 
     </div>
-    <button type="submit" class="checkout" [routerLink]= "['/login']">{{ 'back' | translate }}</button>
+ 
 </div>
     
    
