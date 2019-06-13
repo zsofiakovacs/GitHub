@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { ReportFormComponent } from './report-form/report-form.component';
 import { DatePipe } from '@angular/common';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+//Translation
+import { TranslationComponent } from './translation/translation.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { TranslationComponent } from './translation/translation.component';
 
 
 @NgModule({

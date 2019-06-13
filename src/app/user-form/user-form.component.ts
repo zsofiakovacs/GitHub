@@ -29,7 +29,7 @@ export class UserFormComponent implements OnInit {
         //console.log("Im in")
         this._router.navigate(['report']);
       } else {
-        alert("An error occured: "+ data.body.ENTRIES.EXCEPTION.MESSAGE)
+        alert("An error occurred: "+ data.body.ENTRIES.EXCEPTION.MESSAGE)
       }
 
     }, err => {
