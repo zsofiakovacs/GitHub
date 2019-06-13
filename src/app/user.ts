@@ -1,4 +1,4 @@
-
+//class with information about the user that we will use in application
 export class User {
 
   
