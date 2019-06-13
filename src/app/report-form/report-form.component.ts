@@ -18,7 +18,7 @@ export class ReportFormComponent implements OnInit {
 
   constructor(private reportService: ReportService, private datePipe: DatePipe, private authenticationService: AuthenticationService, private translateService: TranslateService) {
     this.model = reportService.model;
-    this.today = this.datePipe.transform(new Date(), 'dd/MM/yyyy ');
+    this.today = this.datePipe.transform(new Date(), 'HH:MM dd/MM/yyyy ');
   }
 
   ngOnInit() {
