@@ -6,13 +6,14 @@
   </div>
   
   <div class="fadeIn second">{{ 'welcome' | translate }} {{model.name}}!</div>
-
-
+ 
+  <div class="clock">{{today}}</div>
 
     
       <div class="register"> 
-       <button type="submit" class="checkin" (click)="onSubmitIn()" [routerLink]= "['/login']">{{ 'checkin' | translate }}</button>
-       <p>Press check in if you entered work</p>
+       <button type="submit" class="checkin" (click)="onSubmitIn()" ><!--[routerLink]= "['/login']" dsisabling router to login page for friday presentation. 
+        Please uncomment it before going into production-->{{ 'checkin' | translate }}</button>
+        <p>Press check in if you entered work</p>
     
       <button type="submit" class="checkout" (click)="onSubmitOut()" [routerLink]= "['/login']">{{ 'checkout' | translate }}</button>
       <p>Press check out if you leaving work</p>
