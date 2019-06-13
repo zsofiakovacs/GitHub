@@ -9,6 +9,9 @@
     "welcome": "Bienvenid@",
     "checkin": "Entrada",
     "checkout": "Salida",
-    "pattern": "Deberías incluir un email válido"
+    "pattern": "Deberías incluir un email válido",
+    "credentials": "Si no tienes credennciales por favor envía email a supportperson@movicoders.com",
+    "checkin.reminder": "Por favor haz click en Entrada si has entrado a trabajar",
+    "checkout.reminder": "Por favor haz click en Salida si has terminado de trabajar"
 
   }
